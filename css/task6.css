@@ -69,6 +69,7 @@ select {
 
 }
 
+
 .col-md-12 {
     margin-top: 1rem;
     color: gainsboro;
@@ -95,12 +96,14 @@ select {
     height: 3rem;
 }
 .wode{
+    padding-left: 2rem;
     margin-left: 5rem;
     width: 40%;
 }
 .shouye{
+    padding-right: 1rem;
     color: #d2ebef;
-    margin-right: 4rem;
+    margin-right: 5rem;
     text-align: right;
     width: 40%;
 }
