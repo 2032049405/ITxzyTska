@@ -75,6 +75,7 @@ select {
 }
 
 .container {
+    width: 99%;
     font-size: 1rem;
     margin: 0;
     padding: 0;
