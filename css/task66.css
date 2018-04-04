@@ -79,7 +79,7 @@ select {
     font-size: 1rem;
     margin: 0;
     padding: 0;
-    padding-right: 2rem;
+    padding-right: 4rem;
 }
 .dibu{
     width: 100%;
@@ -111,6 +111,7 @@ select {
     width: 10%;
 }
 .col-md-4{
+    padding-right: 2rem;
     margin-right: -1rem;
     color: red;
     margin-top: 0.3rem;
