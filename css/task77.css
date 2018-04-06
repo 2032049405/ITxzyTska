@@ -43,7 +43,7 @@ img{
 .shuiming{
     border: 3px solid #ffffff;
     border-bottom: 0;
-    margin-top: 2rem;
+    margin-top: 4rem;
     font-size: 30px;
     display: flex;
     align-items: center;
@@ -53,6 +53,7 @@ img{
     background-color:#f5c97b;
 }
 .shuzi{
+    margin-bottom: 4rem;
     border: 3px solid #ffffff;
     border-top: 0;
     text-align: center;
@@ -64,7 +65,7 @@ img{
 }
 .shatu{
     margin-top:2rem ;
-    width: 34%;text-align: center;
+    width: 34%;
 }
 .dibu{
     width: 100%;
@@ -93,5 +94,27 @@ img{
 }
 .shatu img{
     width: 100px;
+}
+.shatufa{
+    height: 23rem;
+    overflow: hidden;
+    display: block;
+}
+.shatu{
+    display: none;
+    visibility: hidden;
+}
+.shatufa:hover .shatu{
+    display: inline-block;
+    visibility:visible
+}
+
+a{text-decoration:none}
+button{
+    border: none;
+    color: #ffffff;
+    width: 8rem;
+    background-color:#fbb435;
+    font-size: 2rem;
 }
 
