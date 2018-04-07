@@ -1,0 +1,67 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.top{
+    display: flex;
+    justify-content: space-around;;
+    width: 100%;
+    background-color: #ffffff;
+}
+.img{
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+}
+.images img{
+    width: 100%;
+    height: 30rem;
+}
+.blank{
+    width: 100%;
+    height: 5rem;
+}
+.villain{
+    margin-top: -2rem;
+}
+.round{
+    margin:0 auto;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid gainsboro;
+    color: #29b078;
+    border-radius: 50%;
+
+}
+.substance{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: gainsboro;
+}
+.round{
+    width: 70px;
+    margin-right: 1rem;
+}
+.graph{
+    margin: 1rem 0 0 1rem;
+}
+. script{
+    width: 110px;
+}
+.present{
+    width: 150px;
+    height: 200px;
+    border: 1px solid gainsboro;
+    border-radius: 5%;
+}

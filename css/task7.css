@@ -32,9 +32,8 @@ body{
     border: 1px solid gainsboro;
 }
 .col-md-6{
-    margin-left: 6rem;
     background-color:#69d1e9;
-    padding: 2rem 4rem;
+    font-size: 3rem;
     color: #ffffff;
 }
 .col-md-12{
@@ -47,7 +46,7 @@ body{
 .sanjiao {
     position: absolute;
     left: 90%;
-    top: 15rem;
+    top: 10rem;
 }
 
 
