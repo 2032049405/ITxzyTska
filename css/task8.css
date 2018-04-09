@@ -1,67 +1,286 @@
 
-
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 html {
+
     font-size: 62.5%;
 }
 
-.top{
-    display: flex;
-    justify-content: space-around;;
+body {
     width: 100%;
-    background-color: #ffffff;
+    height: 100%;
+    background-color: #fafafa;
 }
-.img{
+
+.top {
     display: flex;
     justify-content: space-around;
-    width: 10%;
-}
-.images img{
     width: 100%;
-    height: 30rem;
+    background-color: #fafafa;
 }
-.blank{
+
+.disperse {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.head {
     width: 100%;
-    height: 5rem;
+    background-color: #29b078;
 }
-.villain{
-    margin-top: -2rem;
+
+main {
+    background-color: #fafafa;
 }
-.round{
-    margin:0 auto;
-    line-height: 50px;
-    width: 50px;
-    height: 50px;
-    background-color: #ffffff;
-    border: 1px solid gainsboro;
-    color: #29b078;
-    border-radius: 50%;
+
+.hearter {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    text-align: right;
+    color: #ffffff;
+    height: 6rem;
+}
+.font{
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+.hearter a:hover{
+    border-bottom: 5px solid #ffffff;
+}
+.icone .icon:hover{
+    box-shadow: 1px 1px 2px black;
+}
+
+
+.hearter a{
+    text-decoration: none;
+    color: #ffffff;
 
 }
-.substance{
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
+
+.background img {
+    width: 100%;
+    height: 25rem;
+}
+
+.blank {
+    width: 100%;
+    height: 8rem;
+    background-color: #fafafa;
+}
+
+.container {
+    text-align: center;
+}
+
+.xiaoren {
+    color: #29b078;
+    margin-top: 4rem;
+}
+
+.color {
+    color: #000;
+}
+
+p {
     color: gainsboro;
 }
-.round{
-    width: 70px;
-    margin-right: 1rem;
+
+.container img {
+    height: 4rem;
 }
-.graph{
-    margin: 1rem 0 0 1rem;
+
+.xiaoren img {
+    height: 1rem;
 }
-. script{
-    width: 110px;
+
+.col-md-12 {
+    text-align: center;
+    font-size: 2rem;
 }
-.present{
-    width: 150px;
-    height: 200px;
+
+.roundness {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #29b078;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     border: 1px solid gainsboro;
-    border-radius: 5%;
 }
+
+.content {
+    display: flex;
+    color: gainsboro;
+    align-items: center;
+    justify-content: center;
+}
+
+.content img {
+    height: 2rem;
+}
+
+.space {
+    width: 100%;
+    height: 3rem;
+    background-color: #fafafa;
+}
+
+.text {
+    text-align: center;
+    width: 150px;
+    height: 50px;
+}
+
+.boxee {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 260px;
+    border: 1px solid gainsboro;
+    box-shadow: 2px 2px 3px black;
+}
+
+.boxee img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.col-md-12 img {
+    height: 1rem;
+}
+
+.page .col-xs-12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    height: 10rem;
+}
+
+.icon {
+    width: 230px;
+    margin-top: 1rem;
+    background-color: #ffffff;
+}
+
+.spacee {
+    height: 1rem;
+}
+
+.base {
+    width: 100%;
+    height: 20%;
+    background-color: #26a26f;
+}
+
+.functionsicon {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.functionsicon .col-xs-12 {
+    display: flex;
+    flex-flow: column;
+}
+
+.page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gap {
+    padding-right: 1rem;
+    font-size: 10px;
+    text-align: left;
+}
+
+@media screen and (max-width: 1080px) {
+    .hearter {
+        display: flex;
+        justify-content: space-around;
+        float: right;
+        width: 30%;
+        color: #ffffff;
+        height: 6rem;
+    }
+}
+
+.gaaaa{
+    padding-right: 1rem;
+    border-right: 1px solid #ffffff;
+}
+.gaaa{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4rem;
+}
+.second {
+    padding-top: 1rem;
+    padding-right: 4rem;
+    font-size: 10px;
+    text-align: left;
+}
+.second a{
+    padding-bottom: 1rem;
+}
+
+
+
+.gapp {
+    padding: 2rem 9rem 0 0;
+    text-align: left;
+    font-size: 10px;
+}
+
+.gapp img {
+    height: 7rem;
+}
+
+@media screen and (max-width: 1080px) {
+
+    .linkss {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links li {
+        width: 110px;
+    }
+    .page{
+        display: flex;
+        flex-direction:column;
+    }
+    .icone{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+}
+.icone{
+    display: flex;
+    justify-content: space-around;
+}
+.page a{
+    text-decoration: none;
+    color:#ffffff;
+}
+.page a:hover{
+    border-bottom:1px solid #ffffff;
+}
+
+
