@@ -123,6 +123,11 @@ body {
     background-color: #32c086;
 }
 /*hover设置结束*/
+.column-font{
+    padding: 2rem 0;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
 /*a标签样式设置开始*/
 .column a{
     color: #29b078;
