@@ -172,6 +172,7 @@ body {
 .icon{
     display: flex;
     justify-content: space-between;
+
     width: 50%;
     padding: .5rem 0 .5rem 1rem;
     font-size: 12px;
@@ -184,6 +185,9 @@ body {
     width: 50%;
     padding: .5rem 0 .5rem 1rem;
     border:1px solid gainsboro;
+}
+.news{
+    padding-top:.5rem ;
 }
 /*第二行样式结束*/
 
@@ -209,6 +213,7 @@ body {
 .vote-bottom{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: 30px;
     border: 1px solid gainsboro;
