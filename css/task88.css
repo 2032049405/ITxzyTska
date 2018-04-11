@@ -134,6 +134,9 @@ body {
 
 /*最大盒子边框设置开始*/
 .hot-top{
+    width: 95%;
+    margin-top: 1rem;
+    font-size: 12px;
     border: 1px solid gainsboro;
 }
 /*最大盒子边框设置结束*/
@@ -148,7 +151,7 @@ body {
 
 /*第一行样式图片大小*/
 .hot-left img{
-    width: 90px;
+    width: 110px;
     height: 120px;
 }
 /*第一行样式图片大小*/
@@ -178,4 +181,114 @@ body {
     border:1px solid gainsboro;
 }
 /*第二行样式结束*/
+
+/*第三行样式开始*/
+.vote{
+    display: flex;
+    flex-direction: row;
+}
+.vote-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 90px;
+    border: 1px solid gainsboro;
+}
+.vote-right{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:90px ;
+}
+.vote-bottom{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 30px;
+    border: 1px solid gainsboro;
+}
+.status{
+    padding: .5rem 0 .5rem 1rem;
+    border: 1px solid gainsboro;
+}
+.status-bottom{
+    padding: .5rem 0 .5rem 1rem;
+    border: 1px solid gainsboro;
+    color: gainsboro;
+}
+/*第三行样式结束*/
 /*介绍列表样式结束*/
+/*footer开始*/
+/*底部样式底版开始*/
+.banner {
+    width: 100%;
+    height: 10rem;
+    background-color: #29b078;
+    border-bottom: 1px solid #32c086;
+}
+/*底，总体样式设置开始*/
+.banner-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+/*底，总体样式设置结束*/
+
+/*底左样式单独设置*/
+.banner-left{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+}
+/*结束*/
+
+/*底，左边样式单独设置*/
+.banner-left-left{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    padding-top: 4rem;
+}
+/*结束*/
+/*底，居中样式设置开始*/
+.banner-center{
+    padding-top: 1rem;
+}
+.banner-center-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    padding-top: 2rem;
+}
+
+/*底，居中样式设置结束*/
+/*底，右边样式设置*/
+.banner-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding-top: 1rem;
+}
+.banner-right-bottom{
+    padding-top: 1rem;
+}
+.banner-right-bottom img{
+    width: 60px;
+    height: 60px;
+}
+/*底，右边样式结束*/
+/*底部样式底版结束*/
+/*版权样式开始*/
+.copyright{
+    width: 100%;
+    text-align:center;
+    background-color:#29b078;
+    color: #ffffff;
+}
+/*版权样式结束*/
+/*footer结束*/
