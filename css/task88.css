@@ -145,7 +145,26 @@ body {
     border: 1px solid gainsboro;
 }
 /*最大盒子边框设置结束*/
+/*hover盒内设置*/
+.summary{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 410px;
+}
+.summary:hover{
+    opacity: .6;
+    background:black;
+    color: white;
 
+}
+/*结束*/
 /*第一行盒子容器开始*/
 .hot{
     display: flex;
@@ -299,6 +318,13 @@ body {
     text-align:center;
     background-color:#29b078;
     color: #ffffff;
+}
+/*底部hover样式设置*/
+.banner-center-center .qqq:hover{
+    border-bottom: 1px solid #ffffff;
+}
+.qqq{
+    height: 1.5rem;
 }
 /*版权样式结束*/
 /*footer结束*/

@@ -321,5 +321,12 @@ ul {
     background-color:#29b078;
     color: #ffffff;
 }
+/*底部hover样式设置*/
+.banner-center-center .qqq:hover{
+    border-bottom: 1px solid #ffffff;
+}
+.qqq{
+    height: 1.5rem;
+}
 /*版权样式结束*/
 /*footer结束*/
