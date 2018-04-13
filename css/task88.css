@@ -170,7 +170,7 @@ body {
     color: white;
     transform: rotate(360deg);
     padding: 0 2rem;
-    margin: 1rem 2rem 0 0;
+    margin: 1rem 2rem 0 2px;
 }
 /*结束*/
 /*第一行盒子容器开始*/
@@ -192,6 +192,7 @@ body {
 .hot-bottom{
     display: flex;
     flex-direction: row;
+    height: 3rem;
 }
 /*第二行样式横向排列*/
 
@@ -213,9 +214,7 @@ body {
     padding: .5rem 0 .5rem 1rem;
     border:1px solid gainsboro;
 }
-.news{
-    padding-top:.5rem ;
-}
+
 /*第二行样式结束*/
 
 /*第三行样式开始*/
