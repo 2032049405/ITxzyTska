@@ -13,26 +13,14 @@ body {
     background: #ffffff;;
 
 }
-
-.box {
-
-    width: 500px;
-    height: 500px;
-    background: #fff;
+input{
+    background: #000;
 }
-
-.box1 {
-    margin-bottom: 20px;
-    width: 100px;
-    height: 100px;
-    border: 1px solid pink;
+.box{
+    padding-bottom: 10rem;
     background: yellow;
 }
-
-.box2 {
-    margin-top: 20px;
-    width: 100px;
-    height: 100px;
-    border: 1px solid #29b078;
-    background: #000;
+.box1{
+    padding-top: 10rem;
+    background: green;
 }
