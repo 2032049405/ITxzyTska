@@ -1,6 +1,4 @@
-
 <!doctype html>
-<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -13,24 +11,19 @@
     <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
 
     <!-- syntax highlighting 代码高亮主题 -->
-    <link rel="stylesheet" href="./css/lib/reveal/css/zenburn.css">
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
 
     <!-- 打印和PDF输出样式 -->
     <script>
-        var link = document.createElement('link');
+        var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? '../css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
-    <style>
-        .reveal pre code {
-            background-color: #120;
-        }
-    </style>
 </head>
 <body>
-<img src="../img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
 <map name="pttmap">
     <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
 </map>
@@ -39,7 +32,7 @@
         <section>
             <h3>小课堂</h3>
             <h3>【css-task2】margin与padding的区别是什么？</h3>
-            <h3>分享人：宜康</h3>
+            <h3>分享人：宜康 <p>引用:来自吴浩杰师兄</p></h3>
         </section>
         <section>
             <p>目录</p>
@@ -191,13 +184,14 @@
             <p>感谢大家观看</p>
             <p>
                 By
-                <small style="vertical-align: middle">吴昊杰</small>
+                <small style="vertical-align: middle">宜康</small>
             </p>
         </section>
     </div>
 </div>
-<script src="./css/lib/reveal/js/head.min.js"></script>
-<script src="./css/lib/reveal/reveal.js"></script>
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
 <script>
     // 以下为常见配置属性的默认值
     // {
@@ -221,14 +215,10 @@
     Reveal.initialize({
         history: true,
         dependencies: [
-            {src: '../plugin/markdown/marked.js'},
-            {src: '../plugin/markdown/markdown.js'},
-            {src: '../plugin/notes/notes.js', async: true},
-            {
-                src: '../plugin/highlight/highlight.js', async: true, callback: function () {
-                    hljs.initHighlightingOnLoad();
-                }
-            }
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
         ]
     });
 </script>

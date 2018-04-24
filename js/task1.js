@@ -6,6 +6,7 @@ var a=document.getElementsByClassName("a");
  //声明 变量a等于 通过名字获取a元素的文本节点。
 function start(){
     dodges = setInterval(button,200);
+    console.log(setInterval())
 } //函数 start的参数为
   //dodges等于设置时间间隔（方法，间隔时间）
 function stop() {
@@ -21,7 +22,6 @@ function gerrn(){
 }
 function button(){
     var m=[];
-    console.log(m);
     gerrn();
     for (var i = 0; i < 3; i++) {
         m[i] = Math.floor(Math.random()*a.length)
