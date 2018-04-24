@@ -1,9 +1,33 @@
-.a {
-    float:left;
-    width:31%;
-    background-color:orange;
-    padding-bottom:31%;
-    border:#FF0;
-    margin:1%;
-    border-radius: 7%;
+
+.a{
+
+    width: 8rem;
+    height: 8rem;
+    background: yellow;
+    margin: 1rem 1rem;
+    border-radius: 8%;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    width: 100%;
+    text-align: center;
+}
+.box2{
+    text-align: center;
+}
+.box3{
+    text-align: center;
+}
+button{
+    font-size: 3rem;
+    color:#fff;
+    background: yellow;
+    width: 50%;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 5%;
 }
