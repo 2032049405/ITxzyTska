@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html style="font-size:62.5%">
 <head>
-    <title>shiyan</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/tast.css">
+
+    <title>001</title>
+    <style type="text/css">
+        /* 根据屏幕尺寸的放大缩小 div 没有反应 */
+        div{
+            display:flex;
+            justify-content:space-around;
+            width:20rem;
+            height:20rem;
+            color: blue;
+            padding-left: 1rem;
+            line-height: 4rem;
+            font-size: 200px;}
+
+        /* 根据屏幕尺寸的放大缩小 body 颜色切换 */
+        body {background-color:lightgreen;}
+        @media screen and (max-width: 300px) {
+            body {background-color:lightblue;}
+        }
+    </style>
 </head>
 <body>
-<footer>
-    <span class="message">留言</span>
-    <span class="tel">电话联系</span>
-</footer>
-
+<div>asdasdfasdf</div>
 </body>
 </html>
