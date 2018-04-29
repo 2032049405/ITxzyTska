@@ -7,18 +7,16 @@
 
 </head>
 <body>
-
-
-
-</body>
-<script type="text/javascript">
-    function factorial(n) {
-        var product = 1;
-        while (n > 1){
-            product　*=n;
-            n--;
-        }
-       alert (product);
+<p> CSS 选择器 a[target] 确保所有有 target 属性的链接背景颜色为黄色：</p>
+<a href="http://www.w3cschool.cc">w3cschool.cc</a>
+<a href="http://www.disney.com" target="_blank">disney.com</a>
+<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+<p>点击按钮为带有 target 属性的链接添加红色背景。</p>
+<button onclick="myFunction()">点我</button>
+<script>
+    function myFunction() {
+        document.querySelector().style.border = "10px solid red";
     }
 </script>
+</body>
 </html>

@@ -5,8 +5,8 @@ var a=document.getElementsByClassName("a");
  //获取元素a的文本节点。
  //声明 变量a等于 通过名字获取a元素的文本节点。
 function start(){
-    dodges = setInterval(button,200);
-    console.log(setInterval())
+    clearInterval(dodges);
+    dodges = setInterval(button,1000 );
 } //函数 start的参数为
   //dodges等于设置时间间隔（方法，间隔时间）
 function stop() {
