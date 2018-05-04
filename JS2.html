@@ -6,6 +6,7 @@
     <title>Title</title>
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
     <link rel="stylesheet/less" type="text/css" href="less/JS2.less">
     <script src="https://cdn.bootcss.com/less.js/3.0.1/less.min.js"></script>
 </head>
@@ -39,20 +40,29 @@
     </div>
     <div class="pd2rem">
         <div class="pdt2rem">
-            玩家数量 <input type="text">人
+            玩家数量
+            <form name="myform"><input id="import" type="text" class="value" value="4"></form>
+            人
         </div>
         <div class="txc">
-            <div class="top"><img src="images/JS-1.png" alt=""></div>
-            <div class="center"><input type="range" max="20" min="0"></div>
-            <div class="top">
+            <div id="left"><img src="images/JS-1.png" alt=""></div>
+            <div class="center">
+                <form name="myform">
+                    <input type="range" id="slide" max="18" min="4" value="4" />
+                </form>
+            </div>
+            <div id="right">
                 <img src="images/JS-2.png" alt="">
             </div>
         </div>
     </div>
-    <div class="ft-sz3m"><div style="background:#fab344;margin: 0 2rem;"><button>去发牌</button></div></div>
+    <div class="ft-sz3m">
+        <div style="background:#fab344;margin: 0 2rem;">
+            <button class="go">去发牌</button>
+        </div>
+    </div>
 </footer>
 </body>
-<script type="text/javascript">
-    window.history.back(-1);
+<script src="js/JS2.js">
 </script>
 </html>

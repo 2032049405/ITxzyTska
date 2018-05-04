@@ -1,41 +1,150 @@
-var dodges;
-//声明 一个全局变量。
-//以供后面使用。
-var a=document.getElementsByClassName("a");
- //获取元素a的文本节点。
- //声明 变量a等于 通过名字获取a元素的文本节点。
-function start(){
-    clearInterval(dodges);
-    dodges = setInterval(button,1000 );
-} //函数 start的参数为
-  //dodges等于设置时间间隔（方法，间隔时间）
-function stop() {
-    clearInterval(dodges);
-    gerrn()
+// 底部滑动条
+
+var playerNum = document.getElementById("player");
+console.log(playerNum);
+var rangeNum = document.getElementById("myRange");
+console.log(rangeNum);
+
+// 绑定更替滑动条的值和input的值
+rangeNum.onchange = function () {
+    playerNum.value = rangeNum.value;
 }
-// 函数 stop的参数为
-//解除定时器参数为dodges。//gerrn，参数为 for循环 声明 q为0 小于a的数量时 q加1，a的参数为q，a的参数q的属性为蓝色。
-// a的总数为9，q小于就是执行q+1 循环到q下一次等于9时停止循环，设置q的颜色为蓝色。循环从0开始，到8停止。
-function gerrn(){
-    for (var q = 0; q < a.length; q++)
-        a[q].style.background= "blue"
-}
-function button(){
-    var m=[];
-    gerrn();
-    for (var i = 0; i < 3; i++) {
-        m[i] = Math.floor(Math.random()*a.length)
-    }
-    for (var w = 0; w < m.length; w++){
-        a[m[w]].style.background= getcolor();
+//  需要添加实时改变，让input的值显示到滑动条上
+playerNum.onchange = function () {
+    if (playerNum.value > 3 && playerNum.value < 19) {
+        rangeNum.value = playerNum.value;
+    } else {
+        alert("请输入正确的值位于4-18之间")
     }
 }
-//设置函数button 参数为。
-//声明一个变量m 吊调用函数gerrn m 的数组为0，1，2执行 随机取数在0，1，2中各执行一次，执行3次后停止。
-//声明一个变量 w  w
-function getcolor(){
-    var r =Math.floor(Math.random()*256);
-    var g =Math.floor(Math.random()*256);
-    var b =Math.floor(Math.random()*256);
-    return "rgb("+ r + ','+ g +','+ b +")"
+
+// 绑定加事件
+var add = document.getElementById("add");
+add.onclick = function () {
+    if (playerNum.value < 18) {
+        playerNum.value++;
+        rangeNum.value = playerNum.value;
+    } else {
+        alert("人够多了，等下一局吧！");
+    }
+}
+
+// 绑定减事件
+var less = document.getElementById("less");
+less.onclick = function () {
+    if (playerNum.value > 4) {
+        playerNum.value--;
+        rangeNum.value = playerNum.value;
+    } else {
+        alert("人不够，快来人啦！");
+    }
+}
+// 限制必须先设置好人数才能进入页面三
+document.getElementsByClassName("goto")[0].addEventListener("click", function()
+{
+    if(playerNum.value!=document.getElementsByTagName("li").length){
+        alert("玩家人数还没设置好");
+    }
+    else{
+        window.location.href = './task3-1.html';
+    }
+});
+// sort()
+// 设置本地存储
+localStorage.setItem("lastname", "Gates");
+
+var killer = '<li class="pfs-killer">杀手1人</li>';
+var civilian = '<li class="pfs-civilian">平民1人</li>';
+
+// setting的事件
+setting.onclick = function () {
+
+    // // 洗牌算法
+    // // 先隐藏ul标签中的内容
+    // info.innerHTML = "";
+    // // 确定 杀手和平民的个数
+    // var player = [];
+    // var killers = [];
+    // var civilians = [];
+    // killers.length = parseInt(playerNum.value / 3);
+    // civilians.length = playerNum.value - killers.length;
+
+    // console.log(killers.length);
+    // console.log(civilians.length);
+
+    // //将killers的每一项都设置为杀手元素
+    // for (var i = 0; i < killers.length; i++) {
+    //   killers[i] = killer;
+    // }
+    // //将civilians的每一项都设置为平民元素
+    // for (var j = 0; j < civilians.length; j++) {
+    //   civilians[j] = civilian;
+    // }
+    // // console.log(civilians);
+    // // console.log(killers);
+
+    // // 合并到总人数
+    // player = killers.concat(civilians);
+    // // console.log(player);
+    // var x = player.length;
+    // // console.log(player.length);
+    // var out = [];
+    // for (a = 0; a < x; a++) {
+    //   var index = Math.floor(Math.random() * player.length);
+    //   // console.log(player.length);
+    //   // console.log(index);
+    //   out[a] = player[index];
+    //   player.splice(index, 1);
+    // }
+    // console.log(out);
+
+    // // 传入数据
+    // for (b = 0; b < out.length; b++) {
+    //   info.innerHTML += out[b];
+    // }
+
+
+    // 自己的想法
+    // 所有的人数数组
+
+    var player = [];
+    var str = "";
+    player.length = playerNum.value;
+    var killer = Math.floor(playerNum.value / 3);
+
+    // 杀手人数随机定位
+    var out = [];
+    while (out.length < killer) {
+        var randomindex = Math.floor(Math.random() * playerNum.value);
+        if (out.indexOf(randomindex) < 0) {
+            out.push(randomindex);
+        }
+        // console.log(out);
+    }
+    // 给杀手传参
+    for (i = 0; i < out.length; i++) {
+        // 注意这里的out[i]就是定义位置了
+        player[out[i]] = '<li class="killer">' + '杀手' + '</li>';
+    }
+
+
+    for (i = 0; i < player.length; i++) {
+        if (player[i] !== '<li class="killer">' + '杀手' + '</li>') {
+            player[i] = '<li class="civilian">' + '平民' + '</li>';
+        }
+    }
+    // console.log(player);
+
+    for (var i = 0; i < player.length; i++) {
+        str += player[i];
+    }
+    // console.log(str);
+
+    document.getElementById("info").innerHTML = str;
+
+    var obj = JSON.stringify(player);
+    // console.log(obj);
+    // 存入
+    sessionStorage.player = obj;
+    // 用sessionStorage实现页面之间的数据传输                                                                                                                                                                     ,m
 }
