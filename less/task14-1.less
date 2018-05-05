@@ -48,7 +48,7 @@ a{
 
 html{
   font-size:62.5%;
-  //overflow-x: hidden;
+  overflow-x:hidden;
 }
 
 body{
@@ -148,14 +148,16 @@ body{
     font-size:1.4em;
     color:green;
     list-style-type:none;
-    padding-bottom: .3rem;
-    padding-left: 1rem;
-    background: url("../images/task8-23.jpg") no-repeat left 35%;
-      }
-    }
-li:hover {
-  background: url("../images/task8-24.jpg") no-repeat left 35%  ;
+    padding-bottom:.3rem;
+    padding-left:1rem;
+    background:url("../images/task8-23.jpg") no-repeat left 35%;
+  }
 }
+
+li:hover{
+  background:url("../images/task8-24.jpg") no-repeat left 35%;
+}
+
 .bod2{
   width:65em;
   margin-left:2em;
@@ -174,9 +176,16 @@ li:hover {
     background:#fff;
   }
 }
+@media screen and(max-width:500px){
+  .bod2 .frw{
+    display:flex;
+    flex-flow:column;
+  }
+}
 p{
   text-indent:2em;
 }
+
 .pa2{
   padding:0 2em;
 }
@@ -186,17 +195,21 @@ p{
     display:flex;
     flex-flow:column;
   }
+
   .bod2{
     margin:0;
     width:100%;
   }
+
   .text{
     width:100%;
   }
+
   .txt{
     width:50%;
   }
 }
+
 .footer-top{
   background:@gerrn;
   color:@fff;
@@ -221,3 +234,4 @@ p{
     flex-flow:column;
   }
 }
+
