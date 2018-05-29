@@ -11,7 +11,7 @@ function buuton() {
         m[i] = Math.floor(Math.random() * a.length);
     }
     //遍历数组把选出来的盒子赋给M的第i个元素，随机盒子位置。
-  for (var w=0; w<m.length;w++){
+  for (var w=0; w<1000;w++){
         a[m[w]].style.background=getcolor();
   }
   //赋给上面M选出来的盒子，颜色。
