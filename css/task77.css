@@ -37,18 +37,37 @@ img{
 }
 .rongqi{
     display: flex;
+    flex-wrap:wrap;
     justify-content: space-around;
 }
+ul,li{
+    list-style-type:none;
+}
+.row{
+    margin-left:6em;
 
+}
+.blue{
+    background-color:#29bde0;
+}
+.redd{
+    background-color:red;
+}
+
+.red{
+    z-index:1;
+    background-color:red;
+}
 .shuiming{
     border: 3px solid #ffffff;
     border-bottom: 0;
-    margin-top: 4rem;
+
     font-size: 30px;
     display: flex;
     align-items: center;
+    color:#000;
     justify-content: center;
-    width: 100px;
+    width: 106px;outline:none;
     height: 100px;
     background-color:#f5c97b;
 }

@@ -1,6 +1,6 @@
 var borNum = sessionStorage.getItem('dog');
 entrance = JSON.parse(borNum);
-console.log(entrance);
+console.log("js3 person===="+entrance);
 //获取上一个页面传的数据。
 var num = 1;
 var i=0;
@@ -32,7 +32,7 @@ $('#btn').bind('click', function () {
   }else{
       if(num == entrance.length){
           $('#btn').text('法官查看');
-          window.location.href='task777.html'
+          window.location.href='task77.html'
       }else{
           $('.none').show();
           $('.non').hide();
@@ -43,6 +43,7 @@ $('#btn').bind('click', function () {
     // console.log(num)
       }
   }
+
     // console.log(e);
     // console.log(num);
     // console.log(entrance.length);
