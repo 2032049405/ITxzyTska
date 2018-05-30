@@ -7,7 +7,7 @@ slideNum.onchange = function () {
 
 entranceNum.onchange = function () {
     if (entranceNum.value > 3 && entranceNum.value < 19) {
-        entranceNum.value = slideNum.value;
+        slideNum.value=entranceNum.value
     } else {
         alert('请输入正确的人数')
     }
