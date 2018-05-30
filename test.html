@@ -28,11 +28,11 @@
     <input type="button" id="on" value="启用">
     <input type="button" id="off" value="禁用">
     <script>
-       //  a()
-       // var a= function  sayHi(){
-       //      alert('123');
-       //     // a()
-       //  };
+        // a()
+        // var a= function  sayHi(){
+        //     alert('123');
+        //     // a()
+        // }();
         // a()
        ///表达式
        //  a()
@@ -40,10 +40,12 @@
        //      alert('asd')
        // //  }
        //  alert(fn())
-       //  function fn() {
-       //      alert('Hello World')
-       //      return'Hello World'
-       //  }
+        function fn() {
+            alert('Hello World');
+            return'Hello World';
+            fn()
+        }
+        fn()
        //  fn()
        // var funExpression = function(type){
        //            return type==="Expression";
