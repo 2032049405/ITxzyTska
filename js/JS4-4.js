@@ -42,7 +42,6 @@ $('.row').click(function () {
             console.log("person 0 is alive===" + entrance[0].alive);
             sessionStorage.setItem('stage', JSON.stringify(4));
             sessionStorage.setItem('asd', JSON.stringify(4));
-            day++;
             sessionStorage.setItem('sky',JSON.stringify(day));
             var famer=entrance.filter(function (item) {
                 return(item.identity==='平民'&& item.alive==='alive');
@@ -76,6 +75,6 @@ $(".row").click(function () {
        alert("不要鞭尸胸dei")
    }
 })
-
 });
+day++;
 
