@@ -3,130 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <title>任务列表</title>
-    <style>
-        a{ text-decoration:none}
-        .a {
-            font-size: 10px;
-            float: left;
-            width: 31%;
-            background-color: #ffffff;
-            padding-bottom: 31%;
-            border: #FF0;
-            margin: 1%;
-            border-radius: 7%;
-            background-image: url(./images/任务1.jpg)
-        }
+    <script src="https://cdn.bootcss.com/angular.js/1.6.6/angular.min.js"></script>
 
-        .b {
-            font-size: 10px;
-            float: left;
-            width: 31%;
-            background-color: #ffffff;
-            padding-bottom: 31%;
-            border: #FF0;
-            margin: 1%;
-            border-radius: 7%;
-            background-image: url(./images/任务3.jpg)
-        }
-
-        .c {
-            font-size: 10px;
-            float: left;
-            width: 31%;
-            background-color: #ffffff;
-            padding-bottom: 31%;
-            border: #FF0;
-            margin: 1%;
-            border-radius: 7%;
-            background-image: url(./images/任务4.png)
-        }
-
-        .d {
-            font-size: 10px;
-            float: left;
-            width: 31%;
-            background-color: #ffffff;
-            padding-bottom: 31%;
-            border: #FF0;
-            margin: 1%;
-            border-radius: 7%;
-            background-image: url(./images/任务5.jpg)
-        }
-
-        .e {
-            font-size: 10px;
-            float: left;
-            width: 31%;
-            background-color: #ffffff;
-            padding-bottom: 31%;
-            border: #FF0;
-            margin: 1%;
-            border-radius: 7%;
-            background-image: url(./images/任务6.jpg)
-        }
-
-        .f {
-            font-size: 10px;
-            float: left;
-            width: 31%;
-            background-color: #ffffff;
-            padding-bottom: 31%;
-            border: #FF0;
-            margin: 1%;
-            border-radius: 7%;
-            background-image: url(./images/任务7.jpg)
-        }
-
-        .g {
-            font-size: 10px;
-            float: left;
-            width: 31%;
-            background-color: #ffffff;
-            padding-bottom: 31%;
-            border: #FF0;
-            margin: 1%;
-            border-radius: 7%;
-            background-image: url(./images/)
-        }
-
-        .h {
-            font-size: 10px;
-            float: left;
-            width: 31%;
-            background-color: #ffffff;
-            padding-bottom: 31%;
-            border: #FF0;
-            margin: 1%;
-            border-radius: 7%;
-            background-image: url(./images/)
-        }
-
-        .i {
-            font-size: 10px;
-            float: left;
-            width: 31%;
-            background-color: #ffffff;
-            padding-bottom: 31%;
-            border: #FF0;
-            margin: 1%;
-            border-radius: 7%;
-        }
-        .k{
-            background-size:100% 100%;
-            width: 80rem;
-            height: 100rem;
-            background-image: url("./images/背景图.png");
-        }
-    </style>
-</head>
-<body>
-<div class="k">
-    <div class="a"><a href="dome.html">任务1点这里~~</a></div>
-    <div class="b"><a href="task3.html">任务3点这里~~</a></div>
-    <div class="c"><a href="task4.html">任务4点这里~~</a></div>
-    <div class="d"><a href="task5.html">任务5点这里~~</a></div>
-    <div class="e"><a href="task66.html">任务6点这里~~</a></div>
-    <div class="f"><a href="task7.html">任务7点这里~~</a></div>
+<body ng-app="demo">
+<div ng-controller="first">
+    {{role.name}}
+</div>
+<div ng-controller="second">
+    {{role.name}}
 </div>
 </body>
+    <script>
+        angular.module("demo",[])
+            .service("demoService",function(){
+                this.actor={
+                    name:"大雄",
+                    sex:"男"
+                };
+                this.actress={
+                    name:"静香",
+                    sex:"女"
+                }
+            })
+            .controller("first",function ($scope,demoService) {
+                $scope.role=demoService.actor;
+                $scope.updatePublic=function () {
+                    demoService.actor={
+                        name:"胖虎",
+                        sex:"男"
+                    };
+                    $scope.role=demoService.actor;
+                }
+            })
+            .controller("second",function ($scope,demoService) {
+                $scope.role=demoService.actress;
+                $scope.update=function () {
+                    $scope.role=demoService.actor;
+                }
+            })
+    </script>
+
+
+
+<!--//第二个例子-->
+<!--<body ng-app="demo">-->
+<!--<div ng-controller="all">-->
+    <!--{{name}}-->
+    <!--<div ng-controller="first">-->
+        <!--{{name}}-->
+    <!--</div>-->
+    <!--<p ng-controller="second">-->
+        <!--{{name}}-->
+    <!--</p>-->
+<!--</div>-->
+<!--</body>-->
+<!--<script>-->
+    <!--angular.module("demo",[])-->
+        <!--.controller('first',function ($scope) {-->
+            <!--$scope.name="胖虎";-->
+        <!--})-->
+        <!--.controller('second',function ($scope) {-->
+            <!--$scope.name="大雄";-->
+        <!--})-->
+        <!--.controller('all',function ($scope) {-->
+            <!--$scope.name="小夫";-->
+        <!--})-->
+<!--</script>-->
+
+
+
+
+
+
+
+
+<!--<body ng-app="demo">-->
+<!--<p ng-controller="second">-->
+    <!--{{name}}-->
+<!--</p>-->
+<!--<div ng-controller="first">-->
+    <!--{{name}}-->
+<!--</div>-->
+
+<!--<script>-->
+    <!--angular.module("demo",[])-->
+        <!--.controller('first',function ($scope) {-->
+            <!--$scope.name="胖虎";-->
+        <!--})-->
+        <!--.controller('second',function ($scope) {-->
+            <!--$scope.name="大雄";-->
+        <!--})-->
+<!--</script>-->
+<!--</body>-->
+
+
+
+
+
+
+
+    <!--第二个例子-->
+
+
+
+
+
 </html>
