@@ -36,13 +36,23 @@ app.filter('else', function () {
         }
     }
 });
-//定义的第一个控制器。
+
+
+//定义的第一个控制;器。
 app.controller('myOne', function ($scope, $http, $state, $stateParams, FileUploader) {
     console.log($stateParams);
+     $scope.aaa=true;
     //富文本编辑器
-    var E = window.wangEditor;
-    var editor = new E('#editor');
-    editor.create();
+        var E = window.wangEditor;
+        var editor = new E('#editor');
+        editor.create();
+    //清空
+    $scope.empty =function () {
+        $scope.startAt='';
+        $scope.endAt='';
+        $scope.type='';
+        $scope.status=''
+    };
   //http请求
     function ssasas() {
         //进入页面发送http请求获取接口给的参数。
@@ -67,17 +77,29 @@ app.controller('myOne', function ($scope, $http, $state, $stateParams, FileUploa
             //给datum赋值数据，用datum去页面上渲染数据。
             $scope.datum = omg.data.data.articleList;
         });
+        if($stateParams.startAt!==undefined){
+            $scope.startAt =parseInt($stateParams.startAt);
+        }
+        if($stateParams.endAt!==undefined){
+            $scope.endAt =parseInt($stateParams.endAt);
+        }
+        if($stateParams.type!==undefined){
+            $scope.type=$stateParams.type
+        }
+        if($stateParams.status!==undefined){
+            $scope.status=$stateParams.status
+        }
     }
     ssasas();
     //go路由传参。
     $scope.one = function () {
-        if ($scope.startAt === undefined) {
+        console.log(!$scope.startAt>0);
+        if (!$scope.startAt>0) {
             $scope.startAt = '';
         } else {
             $scope.startAt = $scope.startAt.getTime();
         }
-
-        if ($scope.endAt === undefined) {
+        if (!$scope.endAt>0) {
             $scope.endAt = '';
         } else {
             $scope.endAt = $scope.endAt.getTime();
@@ -120,15 +142,14 @@ app.controller('myOne', function ($scope, $http, $state, $stateParams, FileUploa
                     id: go,
                     status: to
                 }
-            })
+            });
             $state.go('two', {}, {reload: true})
         }
-    }
+    };
     //绑定分页的跳转。
     $scope.currentPage = $stateParams.page;
-
     //侧边栏手风琴
-    $scope.myVar = true;
+    $scope.myVar = false;
     $scope.toggle = function () {
         $scope.myVar = !$scope.myVar
     };
@@ -195,8 +216,11 @@ app.controller('myOne', function ($scope, $http, $state, $stateParams, FileUploa
          $scope.img=getData.data.data.article.img;
          console.log($scope.content)
      });
-
  }
+ //返回
+    $scope.retreat =function () {
+        $state.go('two',{},{reload:true})
+    }
     $scope.editor=function (status) {
      if($scope.Id) {
          $http({
@@ -279,4 +303,5 @@ app.config(['$stateProvider', function ($stateProvider) {
             url: '/three/:id',
             templateUrl: 'JS6-3.html'
         })
+
 }]);

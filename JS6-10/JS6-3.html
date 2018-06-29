@@ -49,7 +49,8 @@
                         <label class="inp" for="asd">
                             选择文件
                         </label>
-                        <input id="asd" type="file" nv-file-select="" uploader="uploader" multiple class="blue"
+                        <input id="asd" type="file" nv-file-select="" uploader="uploader"
+                               multiple class="blue"
                                style="display:none;"/><br/>
                     </div>
                     <br><br>
@@ -91,7 +92,7 @@
                                 <!--</td>-->
                                 <td nowrap>
                                     <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()"
-                                            ng-disabled="item.isReady || item.isUploading ||myForm item.isSuccess">
+                                            ng-disabled="item.isReady || item.isUploading ||myForm.item.isSuccess">
                                         <span class="glyphicon glyphicon-upload"></span> Upload
                                     </button>
                                     <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()"
@@ -120,7 +121,7 @@
                     </button>
                 </div>
                 <div style="text-align: right;">
-                    <button class="fff">取消</button>
+                    <button class="fff" ng-click="retreat()">取消</button>
                 </div>
             </div>
         </form>
